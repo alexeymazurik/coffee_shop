@@ -1,3 +1,2 @@
-IceCream count: 2 price: 2
-IrishCoffee count: 2 price: 9
-Sum  = 0
+IceCream count: 3 price: 2
+Sum  = 6

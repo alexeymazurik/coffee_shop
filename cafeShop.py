@@ -57,7 +57,7 @@ class Cashier(object):
 		sum = 0
 
   		def getTask(self):
-  			task = []
+  			self.task = []
   			c = 'y'
   			for y in self.menu:
   				print(y)
@@ -105,17 +105,16 @@ class Cashier(object):
   			f = open('bill.txt', 'w')
   			sum = 0
   			for x in self.task:
-  				self.sum = self.sum + x['price']*x['count']
   				f.write(x["name"] + ' count: '+str(x["count"])+ ' price: '+ str(x['price'])+'\n')
-  			f.write('Sum  = '+str(sum))
+  			f.write('Sum  = '+str(self.sum))
   			f.close()
 
 
   		def checkOut(self):
   			os.system('clear')
-  			print('time , sum')
+  			print('time     sum')
   			for x in self.checkEstimates:
-  				print(str(x['time']) +'  '+str(x['sum']))
+  				print(str(x['time']).rpartition(':')[0] +'  '+str(x['sum']))
   			
 
 
