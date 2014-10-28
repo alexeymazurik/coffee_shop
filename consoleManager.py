@@ -23,7 +23,7 @@ class consoleManager(object):
 
     	elif a == 2:
             os.system('clear')
-            self.keeper.checkStorage()
+            self.cashier.checkOut()
             a = raw_input('Press b key for back ')
             if (a == 'b'):
                 self.mainMenu()
@@ -31,6 +31,9 @@ class consoleManager(object):
     	elif a == 3:
             self.keeper.checkStorage()
             self.cashier.getTask()
+            a = raw_input('Press b key for back ')
+            if (a == 'b'):
+                self.mainMenu()
 
     def storehouseMenu(self):
         
