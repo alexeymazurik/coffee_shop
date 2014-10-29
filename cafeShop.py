@@ -56,6 +56,11 @@ class Cashier(object):
 		checkEstimates = []
 		sum = 0
 
+
+		def  addToMenu(self,s):
+			self.menu.append({'id':s.id,'name':s.name,'price':s.price})
+			
+
   		def getTask(self):
   			self.task = []
   			c = 'y'

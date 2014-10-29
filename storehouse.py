@@ -6,15 +6,16 @@ class StoreKeeper(cafeShop.Manager):
         
         def __init__(self):
             super(StoreKeeper, self).__init__()
-            s = Supply(1,'Cake',15,4)
+            s = Supply('Cake',15,4)
             self.Store.append(s);
-            s = Supply(2,'IceCream',23,2)
+            s = Supply('IceCream',23,2)
             self.Store.append(s);
 
 
-        def addToStorage(self,id,name,count,price):
-            s = Supply(id,name,count,price)
+        def addToStorage(self,name,count,price):
+            s = Supply(name,count,price)
             self.Store.append(s)
+            return s
 
         def removeFromStorage(self,id):
             for x in self.Store:
@@ -39,12 +40,15 @@ class StoreKeeper(cafeShop.Manager):
 
 class Supply(object):
         
-        def __init__(self, id, name, count, price):
+        ID = 0
+
+        def __init__(self, name, count, price):
             super(Supply, self).__init__()
-            self.id = id
+            self.id = Supply.ID
             self.name = name
             self.count = count
             self.price = price
+            Supply.ID = Supply.ID + 1
 
         def  getPrice():
             pass

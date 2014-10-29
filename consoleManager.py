@@ -41,12 +41,12 @@ class consoleManager(object):
             a = int(input('Enter number of command:' ))
             while 1:
                 if a == 1:
-                    id = int(input('Enter id '))
                     name = raw_input('Enter name ')
                     count = int(input('Enter count '))
                     price = float(input('Enter price '))
-                    self.keeper.addToStorage(id,name,count,price)
+                    s = self.keeper.addToStorage(name,count,price)
                     self.keeper.checkStorage()
+                    self.cashier.addToMenu(s)
                     a = int(input('Enter number of command:' ))
                 elif a == 2:
                     id = int(input('Enter id '))
