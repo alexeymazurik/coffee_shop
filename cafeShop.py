@@ -43,8 +43,8 @@ class StoreKeeper(Manager):
 
         def editSupplyFromStorage(self,id):
             name = raw_input('Enter name \n')
-            count = int(input('Enter count \n'))
-            price = float(input('Enter price \n'))
+            count = int(inputter.checkInput('Enter count \n'))
+            price = float(inputter.checkInput('Enter price \n'))
             self.removeFromStorage(id);
             self.addToStorage(name,count,price)
                
@@ -106,7 +106,6 @@ class Cooker(Manager):
 class Cashier(object):
 					
 			def __init__(self):
-				#super(Cashier, self).__init__()
 				self.menu.append({'id':0,'name':'IrishCoffee','price':9,'type':'drink'})
 				self.menu.append({'id':1,'name':'Cappuccino','price':8,'type':'drink'})
 				self.menu.append({'id':2,'name':'Americano with milk','price':10,'type':'drink'})
@@ -153,8 +152,7 @@ class Cashier(object):
 								self.task.append({'id':x['id'],'name':x['name'],'count':count,'price':x['price']})
 
 							
-
-					c = raw_input('More?');
+					c = raw_input('More? (y/n)');
 					self.makeTask()
 
 

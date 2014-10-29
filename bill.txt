@@ -1,2 +1,2 @@
-Cappuccino count: 23 price: 8
-Sum  = 184
+3kk count: 3 price: 2.4
+Sum  = 7.2

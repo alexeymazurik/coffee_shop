@@ -16,7 +16,7 @@ class consoleManager(object):
 
     def mainMenu(self):
         os.system('clear')
-        print(' 1.Storehouse \n 2.Check Estimates  \n 3.Make an order  \n 4.Help \n 5.Exit ')
+        print(' 1.Storehouse \n 2.Check Estimates  \n 3.Make an order \n 4.Exit ')
         a = int(inputter.checkInput('Enter number of command:' ))
 
     	if a == 1:
@@ -37,6 +37,9 @@ class consoleManager(object):
             a = raw_input('Press b key for back ')
             if (a == 'b'):
                 self.mainMenu()
+        elif a == 4:
+            os.system('exit')
+
 
     def storehouseMenu(self):
             self.printStoreHouseMenu()
