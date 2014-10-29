@@ -1,7 +1,5 @@
 import cafeShop
 
-
-
 class StoreKeeper(cafeShop.Manager):
         
         def __init__(self):
@@ -24,14 +22,11 @@ class StoreKeeper(cafeShop.Manager):
             
 
         def editSupplyFromStorage(self,id):
-            for x in self.Store:
-                if(x.id == id):
-                    x.printSupply()
-            name = raw_input('Enter name ')
-            count = int(input('Enter count '))
-            price = float(input('Enter price '))
+            name = raw_input('Enter name \n')
+            count = int(input('Enter count \n'))
+            price = float(input('Enter price \n'))
             self.removeFromStorage(id);
-            self.addToStorage(id,name,count,price)
+            self.addToStorage(name,count,price)
                
 
         
@@ -40,7 +35,7 @@ class StoreKeeper(cafeShop.Manager):
 
 class Supply(object):
         
-        ID = 0
+        ID = 3
 
         def __init__(self, name, count, price):
             super(Supply, self).__init__()
@@ -63,8 +58,5 @@ class Supply(object):
             pass
 
         def printSupply(self):
-            print('id ' + str(self.id))
-            print('name '+ self.name)
-            print('count '+str(self.count))
-            print('price'+ str(self.price))
+            print("ID: " + str(self.id) + "  Name: " + self.name + "  Count: " + str(self.count) + "  Price: " + str(self.price))
 

@@ -1,2 +1,2 @@
-ew count: 2 price: 2.0
-Sum  = 4.0
+Cappuccino count: 23 price: 8
+Sum  = 184
